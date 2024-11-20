@@ -1,7 +1,7 @@
 /* App.css */
 body {
   font-family: Arial, sans-serif;
-  background-color: yellow;
+  background-color: burlywood;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -34,12 +34,12 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: yellowgreen;
 }
 
 div {
   margin-top: 20px;
-  background: orange;
+  background: rosybrown;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
