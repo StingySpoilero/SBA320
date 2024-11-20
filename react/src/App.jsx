@@ -1,37 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import './App.css'; // Import the CSS file
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
+import Home from './Home';
+import Players from './Players';
+import Secret from './Secret';
+import './App.css';
 
 function App() {
-  const [playerData, setPlayerData] = useState(null);
-  const [playerName, setPlayerName] = useState('');
-
-  const fetchPlayerData = async () => {
-    if (playerName) {
-      const response = await fetch(`/api/player-data/${playerName}`);
-      const data = await response.json();
-      setPlayerData(data);
-    }
-  };
-
   return (
-    <div>
-      <Navbar /> {/* Add the Navbar here */}
-      <h1>Player Data Fetcher</h1>
-      <input
-        type="text"
-        placeholder="Enter player name"
-        value={playerName}
-        onChange={(e) => setPlayerName(e.target.value)}
-      />
-      <button onClick={fetchPlayerData}>Fetch Player Data</button>
-      {playerData && (
-        <div>
-          <h2>Player Data:</h2>
-          <pre>{JSON.stringify(playerData, null, 2)}</pre>
-        </div>
-      )}
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/players" element={<Players />} />
+        <Route path="/secret" element={<Secret />} />
+      </Routes>
+    </Router>
   );
 }
 
