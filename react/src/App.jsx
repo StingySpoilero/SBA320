@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import './App.css'; // Import the CSS file
+import Navbar from './Navbar';
 
 function App() {
   const [playerData, setPlayerData] = useState(null);
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <div>
+      <Navbar /> {/* Add the Navbar here */}
       <h1>Player Data Fetcher</h1>
       <input
         type="text"
