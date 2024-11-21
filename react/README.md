@@ -1,8 +1,13 @@
-# React + Vite
+# Technologies used
+- React
+- Vite
+- JavaScript
+- Fetch API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Approach Taken
+- This allows users to search for player statistics by entering any player's name in the Search bar. The data is being fetched from the API and displays relevant information pertaining to their careers.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Key Features
+- Input field for searching for players (really, any NBA player, not just current)
+- Player data from API
+- Error handling for Players not Found
